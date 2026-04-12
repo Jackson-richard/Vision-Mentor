@@ -18,8 +18,6 @@ async def test_connection():
             await websocket.send(json.dumps(test_payload))
             print("Message sent")
             
-            # Since the backend simply passes through clientContent/unknown payloads 
-            # or proxies correctly to Gemini, we just verify the handshake here
             print("Frontend Handshake verification complete. Disconnecting.")
             
     except Exception as e:
